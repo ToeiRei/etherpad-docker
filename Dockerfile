@@ -1,9 +1,19 @@
-FROM node:8.4
+FROM node:latest
+MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
 ENV ETHERPAD_VERSION 1.6.1
 
-RUN apt-get update && \
-    apt-get install -y curl unzip npm mysql-client
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  curl \
+  gzip \
+  git-core \
+  libssl-dev \
+  pkg-config \
+  python \
+  supervisor \
+  
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/
 
