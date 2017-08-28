@@ -37,6 +37,10 @@ RUN ln -s var/settings.json settings.json
 
 RUN chmod +x /entrypoint.sh
 
+# Install the plugins needed:
+RUN npm install ep_adminpads ep_authorship_toggle ep_countable ep_push2delete ep_spellcheck ep_user_font_size
+
+
 EXPOSE 9001
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bin/run.sh", "--root"]
