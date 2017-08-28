@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
   python \
   supervisor \
   unzip \
+  mariadb-client \
   
   && rm -rf /var/lib/apt/lists/*
 
