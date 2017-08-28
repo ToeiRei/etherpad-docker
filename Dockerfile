@@ -3,7 +3,7 @@ MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
 ENV ETHERPAD_VERSION 1.6.1
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   build-essential \
   curl \
   gzip \
