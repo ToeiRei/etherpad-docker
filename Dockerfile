@@ -34,6 +34,8 @@ RUN sed -i 's/^node/exec\ node/' bin/run.sh
 VOLUME /opt/etherpad-lite/var
 RUN ln -s var/settings.json settings.json
 
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 9001
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bin/run.sh", "--root"]
