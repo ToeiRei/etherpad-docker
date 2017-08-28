@@ -1,4 +1,4 @@
-FROM node:7.6
+FROM node:8.4
 
 ENV ETHERPAD_VERSION 1.6.1
 
