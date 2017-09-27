@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
 ENV ETHERPAD_VERSION 1.6.1
