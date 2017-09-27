@@ -9,9 +9,7 @@ RUN apk update && apk upgrade && apk add \
   python \
   supervisor \
   unzip \
-  mariadb-client \
-  
-  && apk cache clean
+  mariadb-client
 
 WORKDIR /opt/
 
