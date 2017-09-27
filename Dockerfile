@@ -3,19 +3,15 @@ MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
 ENV ETHERPAD_VERSION 1.6.1
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-  build-essential \
+RUN apk update && apk upgrade && apk add \
   curl \
-  gzip \
-  git-core \
-  libssl-dev \
-  pkg-config \
+  git \
   python \
   supervisor \
   unzip \
   mariadb-client \
   
-  && rm -rf /var/lib/apt/lists/*
+  && apk cache clean
 
 WORKDIR /opt/
 
