@@ -21,6 +21,9 @@
 	if ( penv.ETHERPAD_DEFAULT_PAD_TEXT ) {
 		settings['defaultPadText'] = penv.ETHERPAD_DEFAULT_PAD_TEXT;
 	}
+	
+	settings['automaticReconnectionTimeout'] = 20;
+	
 	if ( penv.ETHERPAD_ADMIN_PASSWORD ) {
 		settings['users'] = {};
 		settings['users'][penv.ETHERPAD_ADMIN_USER] = {
