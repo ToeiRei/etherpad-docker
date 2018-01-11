@@ -35,7 +35,7 @@ RUN chmod +x /entrypoint.sh
 RUN npm install ep_adminpads ep_authorship_toggle ep_countable ep_push2delete ep_spellcheck ep_user_font_size ep_markdown ep_headings2
 
 # Bugfixes here:
-mv /opt/etherpad-lite/src/node_modules/npm/node_modules/dezalgo /opt/etherpad-lite/src/node_modules/npm/node_modules/.dezalgo.DELETE
+RUN mv /opt/etherpad-lite/src/node_modules/npm/node_modules/dezalgo /opt/etherpad-lite/src/node_modules/npm/node_modules/.dezalgo.DELETE
 
 
 EXPOSE 9001
