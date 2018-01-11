@@ -9,7 +9,8 @@ RUN apk update && apk upgrade && apk add \
   python \
   supervisor \
   unzip \
-  mariadb-client
+  mariadb-client \
+  findutils 
 
 WORKDIR /opt/
 
@@ -35,7 +36,8 @@ RUN chmod +x /entrypoint.sh
 RUN npm install ep_adminpads ep_authorship_toggle ep_countable ep_push2delete ep_spellcheck ep_user_font_size ep_markdown ep_headings2
 
 # Bugfixes here:
-RUN mv /opt/etherpad-lite/src/node_modules/npm/node_modules/dezalgo /opt/etherpad-lite/src/node_modules/npm/node_modules/.dezalgo.DELETE
+RUN find /opt/etherpad-lite -name package-lock.json  -exec rm {} \;
+RUN cd /opt/etherpad-lite && bin/installDeps.sh
 
 
 EXPOSE 9001
