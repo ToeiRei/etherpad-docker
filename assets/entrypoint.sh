@@ -66,6 +66,6 @@ if [ "$1" = 'bin/run.sh' ]; then
 			echo "$ETHERPAD_API_KEY" > APIKEY.txt
 		fi
 	fi
-fi
+
 exec "$@"
 
