@@ -39,6 +39,7 @@ RUN npm install ep_adminpads ep_authorship_toggle ep_countable ep_push2delete ep
 RUN find /opt/etherpad-lite -name package-lock.json  -exec rm {} \;
 RUN cd /opt/etherpad-lite && bin/installDeps.sh
 
+RUN rm /opt/etherpad-lite/settings.json
 
 EXPOSE 9001
 ENTRYPOINT ["/entrypoint.sh"]
