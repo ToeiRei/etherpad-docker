@@ -13,6 +13,7 @@ This is more or less the current release (as of writing this file) including a h
 * ETHERPAD_DB_USER= database name
 * ETHERPAD_DB_HOST= database host (your MySQL container)
 * ETHERPAD_DB_PASSWORD= database password
+* NODE_ENV=production
 
 ## Plugins installed:
 * ep_adminpads 
