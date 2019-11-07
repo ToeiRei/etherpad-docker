@@ -1,7 +1,7 @@
 FROM node:alpine
 MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
-ENV ETHERPAD_VERSION 1.7.5
+ENV ETHERPAD_VERSION 1.8.0-beta.1
 
 RUN apk update && apk upgrade && apk add \
   curl \
