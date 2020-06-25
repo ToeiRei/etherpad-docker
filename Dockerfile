@@ -2,6 +2,7 @@ FROM node:alpine
 MAINTAINER Viktoria Rei Bauer, dockermaster@stargazer.at
 
 ENV ETHERPAD_VERSION 1.8.4
+ENV NODE_ENV=production
 
 RUN apk update && apk upgrade && apk add \
   curl \
