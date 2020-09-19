@@ -37,7 +37,7 @@ RUN chmod +x /entrypoint.sh
 RUN npm install ep_adminpads2 ep_authorship_toggle ep_push2delete ep_spellcheck ep_user_fontsize_version_2 ep_markdown ep_headings2
 
 # Bugfixes here:
-RUN find /opt/etherpad-lite -name package-lock.json  -exec rm {} \;
+# RUN find /opt/etherpad-lite -name package-lock.json  -exec rm {} \;
 RUN cd /opt/etherpad-lite && bin/installDeps.sh
 
 RUN rm /opt/etherpad-lite/settings.json
