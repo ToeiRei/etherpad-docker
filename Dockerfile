@@ -33,9 +33,6 @@ RUN ln -s var/settings.json settings.json
 
 RUN chmod +x /entrypoint.sh
 
-# Install the plugins needed:
-RUN npm install ep_adminpads3
-
 # Bugfixes here:
 # RUN find /opt/etherpad-lite -name package-lock.json  -exec rm {} \;
 RUN cd /opt/etherpad-lite && bin/installDeps.sh
