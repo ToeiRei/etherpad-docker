@@ -7,7 +7,7 @@ ENV NODE_ENV=production
 RUN apk update && apk upgrade && apk add \
   curl \
   git \
-  python \
+  python3 \
   supervisor \
   unzip \
   mariadb-client \
