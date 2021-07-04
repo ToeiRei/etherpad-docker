@@ -21,6 +21,8 @@ RUN curl -SL \
     > etherpad.zip && unzip etherpad && rm etherpad.zip && \
     mv etherpad-lite-${ETHERPAD_VERSION} etherpad-lite
 
+RUN npm install -g npm@latest
+
 WORKDIR etherpad-lite
 
 RUN bin/installDeps.sh && rm settings.json
